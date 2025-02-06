@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Circle</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #93bb9b;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+        }
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #message {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Circle</h1>
+
+    <div class="circle" id="circle"></div>
+    <p id="message"></p>
+
+    <script>
+        const circle = document.getElementById('circle');
+        const message = document.getElementById('message');
+
+        circle.addEventListener('mouseover', () => {
+            message.innerText = 'You are in the circle';
+        });
+
+        circle.addEventListener('mouseleave', () => {
+            message.innerText = 'You are outside of the circle';
+        });
+
+        circle.addEventListener('click', () => {
+            circle.style.backgroundColor = 'gray';
+        });
+
+        circle.addEventListener('dblclick', () => {
+            circle.style.backgroundColor = 'blue';
+        });
+    </script>
+</body>
+</html>

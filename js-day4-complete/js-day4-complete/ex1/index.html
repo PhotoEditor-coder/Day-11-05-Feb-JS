@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Example</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1 id="main-title">Welcome to My Website</h1>
+      <ul class="nav-menu">
+        <li class="menu-item">Home</li>
+        <li class="menu-item">About</li>
+        <li class="menu-item">Contact</li>
+        <li>Test</li>
+      </ul>
+    </header>
+
+    <section class="content">
+      <article id="article-1" class="blog-post">
+        <h2>Understanding the DOM</h2>
+        <p class="paragraph">
+          This is a paragraph explaining the DOM structure.
+        </p>
+      </article>
+      <article id="article-2" class="blog-post">
+        <h2>JavaScript and the DOM</h2>
+        <p>
+          This is another paragraph explaining how JavaScript interacts with the
+          DOM.
+        </p>
+      </article>
+    </section>
+
+    <footer id="main-footer">
+      <p>© 2025 My Website</p>
+    </footer>
+    <script>
+      // let mainTitle = document.getElementById("main-title");
+      // console.log(mainTitle.textContent);
+      // mainTitle.style.color = "blue";
+      // // background-color: red;
+      // mainTitle.style.backgroundColor = "aqua";
+
+      // let menuItems = document.getElementsByClassName("menu-item");
+      // console.log(menuItems);
+      // // menuItems.style.color = "green";
+      // // menuItems[0].style.color = "green";
+      // // menuItems[1].style.color = "green";
+      // // menuItems[2].style.color = "green";
+
+      // // You cannot use a forEach loop inside a HTML Collection
+
+      // for (let i = 0; i < menuItems.length; i++) {
+      //   menuItems[i].style.color = "green";
+      // }
+
+      // let listItem = document.getElementsByTagName("li");
+      // console.log(listItem);
+
+      // const title = document.querySelector("#main-title");
+
+      // console.log(title);
+
+      // const blogPost = document.querySelector(".blog-post");
+      // console.log(blogPost);
+
+      // const footer = document.querySelector("footer");
+      // console.log(footer);
+
+      // const blogPosts = document.querySelectorAll(".blog-post");
+      // console.log(blogPosts);
+
+      // blogPosts.forEach((blogItem) => {
+      //   blogItem.style.border = "2px solid red";
+      // });
+
+      // // footer.textContent = "<h2>CodeFactory</h2>";
+      // footer.innerHTML = "<h2>CodeFactory</h2>";
+
+      let paragraph = document.createElement("p");
+
+      paragraph.setAttribute("class", "new-paragraph");
+      paragraph.textContent = "I am a new paragraph";
+      console.log(paragraph);
+
+      let article1 = document.querySelector("#article-1");
+      // article1.appendChild(paragraph);
+      // article1.prepend(paragraph);
+      let anotherParagraph = document.querySelector(".paragraph");
+      article1.insertBefore(paragraph, anotherParagraph);
+    </script>
+  </body>
+</html>
